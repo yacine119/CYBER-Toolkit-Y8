@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyber Toolkit</title>
+<link rel="stylesheet" href="FP1.css">
+</head>
+<body>
+
+  
+  <header class="navbar">
+    <div class="navbar-left">
+      <span class="logo-icon">🛡️</span>
+      <h1 class="logo-text">CYBER <span>TOOLKIT</span></h1>
+    </div>
+
+    <nav class="navbar-links">
+      <a href="#" class="nav-link active" data-action="dashboard">Dashboard</a>
+      <a href="#" class="nav-link" data-action="all">Tools</a>
+      <a href="#" class="nav-link" data-action="learn">Learn</a>
+      <a href="#" class="nav-link" data-action="favorites">Favorites</a>
+      <a href="#" class="nav-link" data-action="community">Community</a>
+    </nav>
+
+    <div class="navbar-right">
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+      <button class="icon-btn has-dot" aria-label="Notifications">🔔</button>
+      <div class="profile">
+        <img src="/profile.jpg" alt="User avatar" class="avatar">
+        <span class="profile-name">Yacine</span>
+        <span class="chevron">⌄</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+
+
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <p class="nav-label">Main</p>
+        <a href="#" class="nav-item active" data-category="dashboard">
+          <span class="nav-icon">🏠</span> Dashboard
+        </a>
+        <a href="#" class="nav-item" data-category="all">
+          <span class="nav-icon">▦</span> All Tools
+        </a>
+        <a href="#" class="nav-item" data-category="favorites">
+          <span class="nav-icon">★</span> Favorites
+        </a>
+
+        <p class="nav-label">Tools</p>
+        <a href="#" class="nav-item" data-category="Network">
+          <span class="nav-icon">🌐</span> Network
+        </a>
+        <a href="#" class="nav-item" data-category="Web Security">
+          <span class="nav-icon">🛡️</span> Web Security
+        </a>
+        <a href="#" class="nav-item" data-category="Wireless">
+          <span class="nav-icon">📶</span> Wireless
+        </a>
+        <a href="#" class="nav-item" data-category="Exploitation">
+          <span class="nav-icon">🐞</span> Exploitation
+        </a>
+        <a href="#" class="nav-item" data-category="Forensics">
+          <span class="nav-icon">🔍</span> Forensics
+        </a>
+        <a href="#" class="nav-item" data-category="Password">
+          <span class="nav-icon">🔒</span> Password
+        </a>
+        <a href="#" class="nav-item" data-category="Reverse Engineering">
+          <span class="nav-icon">⟨/⟩</span> Reverse Engineering
+        </a>
+        <a href="#" class="nav-item" data-category="General">
+          <span class="nav-icon">⟳</span> General
+        </a>
+
+        <p class="nav-label">Learn</p>
+        <a href="#" class="nav-item">📖 Cheat Sheets</a>
+        <a href="#" class="nav-item">📁 Resources</a>
+        <a href="#" class="nav-item">💡 Tips &amp; Tricks</a>
+        <a href="#" class="nav-item">ℹ️ About</a>
+      </nav>
+    </aside>
+
+   
+    <main class="main-content">
+
+      <section class="hero">
+        <h2 class="hero-eyebrow">Cyber Toolkit</h2>
+        <h1 class="hero-title">Find the right tool, fast.</h1>
+        <p class="hero-sub">Search thousands of cybersecurity tools, cheat sheets and resources instantly.</p>
+
+        <div class="hero-search">
+          <input type="text" id="heroSearchInput" placeholder="Search for a tool...">
+          <button id="heroSearchBtn" class="btn-primary">Search</button>
+        </div>
+
+        <div class="hero-tags">
+          <span class="hero-tags-label">Popular:</span>
+          <button class="hero-tag" data-name="Wireshark">Wireshark</button>
+          <button class="hero-tag" data-name="Burp Suite">Burp Suite</button>
+          <button class="hero-tag" data-name="Nmap">Nmap</button>
+          <button class="hero-tag" data-name="Metasploit">Metasploit</button>
+        </div>
+      </section>
+
+      <div class="tip-banner">
+        <span class="tip-icon">💡</span>
+        <div class="tip-body">
+          <strong>Today's tip</strong>
+          <p id="tipText">Loading tip...</p>
+        </div>
+      </div>
+
+      <div class="section-heading">
+        <h3>Start Here</h3>
+      </div>
+      <div class="quick-start-grid">
+        <button class="qs-card" data-names="Nmap,Wireshark">
+          <span class="qs-icon">🌐</span>
+          <h4>Network Analysis</h4>
+          <p>Nmap · Wireshark</p>
+        </button>
+        <button class="qs-card" data-names="Burp Suite,SQLmap">
+          <span class="qs-icon">🛡️</span>
+          <h4>Web Pentesting</h4>
+          <p>Burp Suite · SQLmap</p>
+        </button>
+        <button class="qs-card" data-names="John the Ripper,Hashcat">
+          <span class="qs-icon">🔒</span>
+          <h4>Password Auditing</h4>
+          <p>John the Ripper · Hashcat</p>
+        </button>
+        <button class="qs-card" data-names="Metasploit,Aircrack-ng">
+          <span class="qs-icon">💣</span>
+          <h4>Offensive Security</h4>
+          <p>Metasploit · Aircrack-ng</p>
+        </button>
+      </div>
+
+      <div class="section-heading">
+        <h3>Popular Tools</h3>
+        <a href="#" class="view-all" data-category="all">View all ›</a>
+      </div>
+
+      <div class="tools-grid" id="toolsGrid">
+        
+      </div>
+    </main>
+
+    
+    <aside class="right-panel">
+
+      <div class="panel-card">
+        <h4 class="panel-title">★ Favorites</h4>
+        <div id="favoritesPanel" class="chip-list"></div>
+      </div>
+
+      <div class="panel-card">
+        <h4 class="panel-title">🕓 Recent Searches</h4>
+        <ul id="recentSearchesPanel" class="recent-list"></ul>
+      </div>
+
+      <div class="panel-card">
+        <h4 class="panel-title">⚡ Quick Actions</h4>
+        <div class="quick-actions">
+          <button class="quick-btn green" data-action="Network Scanner">Network Scanner <span>🌐</span></button>
+          <button class="quick-btn blue" data-action="Port Scanner">Port Scanner <span>⇄</span></button>
+          <button class="quick-btn purple" data-action="Hash Generator">Hash Generator <span>#</span></button>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    © 2024 Cyber Toolkit. Built for ethical hackers and security enthusiasts.(it's my first simple website) 💜
+  </footer>
+
+  <!-- Toast notification -->
+  <div id="toast" class="toast"></div>
+
+  <script src="FP1.js"></script>
+</body>
+</html>
