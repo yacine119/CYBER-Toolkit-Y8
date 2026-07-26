@@ -120,23 +120,19 @@
       <div class="quick-start-grid">
         <button class="qs-card" data-names="Nmap,Wireshark">
           <span class="qs-icon">🌐</span>
-          <h4>Network Analysis</h4>
-          <p>Nmap · Wireshark</p>
+          <h4 class="qs-h4">Network Analysis</h4>
         </button>
         <button class="qs-card" data-names="Burp Suite,SQLmap">
           <span class="qs-icon">🛡️</span>
-          <h4>Web Pentesting</h4>
-          <p>Burp Suite · SQLmap</p>
+          <h4 class="qs-h4">Web Pentesting</h4>
         </button>
         <button class="qs-card" data-names="John the Ripper,Hashcat">
           <span class="qs-icon">🔒</span>
-          <h4>Password Auditing</h4>
-          <p>John the Ripper · Hashcat</p>
+          <h4 class="qs-h4">Password Auditing</h4>
         </button>
         <button class="qs-card" data-names="Metasploit,Aircrack-ng">
           <span class="qs-icon">💣</span>
-          <h4>Offensive Security</h4>
-          <p>Metasploit · Aircrack-ng</p>
+          <h4 class="qs-h4">Offensive Security</h4>
         </button>
       </div>
 
@@ -174,6 +170,38 @@
 
     </aside>
   </div>
+                    <!-- toast notification -->
+   <div id="toast" class="toast"></div>
+ 
+  <!-- ============ HASH GENERATOR MODAL ============ -->
+  <div id="hashModal" class="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h3># Hash Generator</h3>
+        <button id="closeHashModal" class="modal-close" aria-label="Close">✕</button>
+      </div>
+ 
+      <div class="modal-body">
+        <label class="modal-label" for="hashInput">Text to hash</label>
+        <textarea id="hashInput" rows="4" placeholder="Type or paste text..."></textarea>
+ 
+        <label class="modal-label">Algorithm</label>
+        <div class="algo-tabs">
+          <button class="algo-tab active" data-algo="MD5">MD5</button>
+          <button class="algo-tab" data-algo="SHA-1">SHA-1</button>
+          <button class="algo-tab" data-algo="SHA-256">SHA-256</button>
+          <button class="algo-tab" data-algo="SHA-512">SHA-512</button>
+        </div>
+ 
+        <label class="modal-label">Result</label>
+        <div class="hash-output-row">
+          <input type="text" id="hashOutput" readonly placeholder="Hash will appear here...">
+          <button id="copyHashBtn" class="btn-secondary">Copy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
 
   <footer class="site-footer">
     © 2024 Cyber Toolkit. Built for ethical hackers and security enthusiasts.(it's my first simple website) 💜
